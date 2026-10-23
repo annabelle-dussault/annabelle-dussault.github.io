@@ -61,7 +61,7 @@ def construire(page_id, langue):
     titre_page = corps.split("\n", 1)[0].replace("<!-- titre:", "").replace("-->", "").strip()
     corps = corps.split("\n", 1)[1].replace("{p}", p)
     titre = "Annabelle Dussault" if page_id == "accueil" else f"{titre_page} | Annabelle Dussault"
-    autre, autre_court, autre_long = t["autre_langue"]
+    autre, _, autre_long = t["autre_langue"]
 
     actif = ' class="active" aria-current="page"'
     menu = "\n".join(
