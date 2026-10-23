@@ -18,7 +18,7 @@ PAGES = [
 TEXTES = {
     "fr": {
         "menu": {"accueil": "Accueil", "apropos": "À propos", "cv": "CV",
-                 "engagements": "Engagements", "recos": "Recommandations"},
+                 "engagements": "Engagements", "recos": "Hors campus"},
         "description": "Annabelle Dussault, étudiante à la maîtrise en science politique à l'Université Laval.",
         "pied": "Étudiante à la maîtrise en science politique, Université Laval",
         "droits": "Tous droits réservés.",
@@ -29,7 +29,7 @@ TEXTES = {
     },
     "en": {
         "menu": {"accueil": "Home", "apropos": "About", "cv": "CV",
-                 "engagements": "Involvement", "recos": "Recommendations"},
+                 "engagements": "Involvement", "recos": "Off campus"},
         "description": "Annabelle Dussault, master's student in political science at Université Laval.",
         "pied": "Master's student in political science, Université Laval",
         "droits": "All rights reserved.",
