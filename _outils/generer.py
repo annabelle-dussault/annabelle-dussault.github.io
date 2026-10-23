@@ -11,7 +11,6 @@ PAGES = [
     ("accueil", "index.html", "index.html"),
     ("apropos", "a-propos.html", "about.html"),
     ("cv", "cv.html", "cv.html"),
-    ("engagements", "engagements.html", "involvement.html"),
     ("recos", "recommandations.html", "recommendations.html"),
 ]
 
@@ -148,6 +147,7 @@ def construire(page_id, langue):
 	<script src="{p}assets/js/menu.js"></script>
 	<script src="{p}assets/js/saisons.js"></script>
 	<script src="{p}assets/js/galerie.js"></script>
+	<script src="{p}assets/js/carrousel.js"></script>
 </body>
 </html>
 """

@@ -259,20 +259,112 @@ main { padding: 4rem 0 5rem; }
 /* ===== À propos ===== */
 .a-propos {
 	display: grid;
-	grid-template-columns: minmax(0, 40rem) minmax(0, 18rem);
+	grid-template-columns: minmax(0, 40rem) minmax(0, 20rem);
 	justify-content: space-between;
 	gap: 3rem;
+	align-items: start;
 }
-.a-propos aside {
-	background: var(--fond-alt);
-	padding: 1.75rem;
+
+/* Carrousel de photos */
+.carrousel {
+	position: relative;
+	aspect-ratio: 4 / 5;
 	border-radius: 4px;
-	align-self: start;
+	overflow: hidden;
+	background: var(--fond-alt);
 }
-.a-propos aside h2 { font-size: 1.25rem; }
-.a-propos aside ul { padding-left: 1.1em; margin: 0; }
-.a-propos aside li { margin-bottom: 0.5rem; }
-@media (max-width: 760px) { .a-propos { grid-template-columns: 1fr; } }
+.carrousel-piste img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	opacity: 0;
+	transition: opacity 0.9s ease;
+}
+.carrousel-piste img.actif { opacity: 1; }
+.carrousel-prec, .carrousel-suiv {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 2.25rem;
+	height: 2.25rem;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(15, 22, 32, 0.45);
+	color: #ffffff;
+	font-size: 1.5rem;
+	line-height: 1;
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.2s ease, background-color 0.2s ease;
+}
+.carrousel:hover .carrousel-prec, .carrousel:hover .carrousel-suiv,
+.carrousel-prec:focus-visible, .carrousel-suiv:focus-visible { opacity: 1; }
+.carrousel-prec:hover, .carrousel-suiv:hover { background: rgba(15, 22, 32, 0.7); }
+.carrousel-prec { left: 0.6rem; }
+.carrousel-suiv { right: 0.6rem; }
+.carrousel-points {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0.75rem;
+	display: flex;
+	justify-content: center;
+	gap: 0.4rem;
+}
+.carrousel-points button {
+	width: 0.5rem;
+	height: 0.5rem;
+	padding: 0;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.55);
+	cursor: pointer;
+}
+.carrousel-points button.actif { background: #ffffff; transform: scale(1.3); }
+
+/* Engagement, recherche et distinctions : listes compactes */
+.parcours {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 0 4rem;
+	margin-top: 4rem;
+}
+.parcours section + section { margin-top: 2.75rem; }
+.parcours h2 {
+	font-size: 1.4rem;
+	padding-bottom: 0.5rem;
+	border-bottom: 2px solid var(--encre);
+	margin-bottom: 0.25rem;
+	scroll-margin-top: 1.5rem;
+}
+.compact { list-style: none; padding: 0; margin: 0; }
+.compact li {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	gap: 1.25rem;
+	padding: 0.7rem 0;
+	border-bottom: 1px solid var(--bordure);
+	line-height: 1.4;
+}
+.compact strong { display: block; font-size: 0.98rem; }
+.compact span { display: block; font-size: 0.9rem; color: var(--texte-pale); }
+.compact small { display: block; font-size: 0.85rem; color: var(--texte-pale); font-style: italic; margin-top: 0.2rem; }
+.compact time {
+	flex-shrink: 0;
+	font-size: 0.85rem;
+	color: var(--texte-pale);
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+@media (max-width: 860px) {
+	.a-propos { grid-template-columns: 1fr; }
+	.carrousel { max-width: 22rem; }
+	.parcours { grid-template-columns: 1fr; }
+	.parcours > div + div { margin-top: 2.75rem; }
+}
 
 /* ===== CV en PDF ===== */
 .cv-liens { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: center; margin-bottom: 1.5rem; }
@@ -287,30 +379,6 @@ main { padding: 4rem 0 5rem; }
 @media (max-width: 700px) {
 	.cv-visionneuse { display: none; }
 	.cv-mobile { display: block; }
-}
-
-/* ===== Engagements ===== */
-.engagements { list-style: none; padding: 0; margin: 0; border-top: 2px solid var(--encre); }
-.engagements > li {
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) 9rem;
-	gap: 0.5rem 2rem;
-	padding: 1.5rem 0;
-	border-bottom: 1px solid var(--bordure);
-}
-.engagements h2 { font-size: 1.35rem; margin-bottom: 0.35rem; }
-.engagements .lieu { color: var(--texte-pale); font-size: 0.95rem; margin: 0 0 0.4rem; }
-.engagements ul { margin: 0; padding-left: 1.1em; }
-.engagements .annees {
-	text-align: right;
-	color: var(--texte-pale);
-	font-size: 0.95rem;
-	font-variant-numeric: tabular-nums;
-	padding-top: 0.3rem;
-}
-@media (max-width: 640px) {
-	.engagements > li { grid-template-columns: 1fr; }
-	.engagements .annees { text-align: left; order: -1; padding: 0; }
 }
 
 /* ===== Recommandations ===== */
