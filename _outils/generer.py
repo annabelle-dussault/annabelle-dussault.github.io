@@ -145,6 +145,7 @@ def construire(page_id, langue):
 	<script src="{p}assets/js/theme.js"></script>
 	<script src="{p}assets/js/menu.js"></script>
 	<script src="{p}assets/js/saisons.js"></script>
+	<script src="{p}assets/js/galerie.js"></script>
 </body>
 </html>
 """
