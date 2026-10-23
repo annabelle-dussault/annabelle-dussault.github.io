@@ -1,3 +1,5 @@
+> **Note sur ce site :** les pages HTML (`index.html`, `a-propos.html`, `cv.html`, `recommandations.html` et le dossier `en/` pour la version anglaise) sont générées par le script `_outils/generer.py`, à partir des fichiers de contenu situés dans `_outils/contenu/fr/` et `_outils/contenu/en/`. Pour modifier le site, il faut éditer ces fichiers de contenu, puis lancer `python3 _outils/generer.py`.
+
 # Créer votre site web avec GitHub Pages
 
 Bienvenue ! Ce guide vous expliquera comment utiliser GitHub Pages pour créer votre propre site web personnel en utilisant n'importe quel template HTML. 
