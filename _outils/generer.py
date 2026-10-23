@@ -115,6 +115,7 @@ def construire(page_id, langue):
 				<button type="button" class="bouton-saison" aria-pressed="true"><svg class="cadran" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path class="quart quart-hiver" d="M12 12L12.00 4.00A8 8 0 0 1 20.00 12.00Z"/><path class="quart quart-printemps" d="M12 12L20.00 12.00A8 8 0 0 1 12.00 20.00Z"/><path class="quart quart-ete" d="M12 12L12.00 20.00A8 8 0 0 1 4.00 12.00Z"/><path class="quart quart-automne" d="M12 12L4.00 12.00A8 8 0 0 1 12.00 4.00Z"/><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M12 4v16M4 12h16" stroke="currentColor" stroke-width="0.8" opacity=".45"/><line class="aiguille" x1="12" y1="12" x2="12" y2="5.8" stroke-width="1.6" stroke-linecap="round"/><circle class="pivot" cx="12" cy="12" r="1.6"/></svg></button>
 				<button type="button" class="bouton-theme" data-nuit="{t["theme"][0]}" data-jour="{t["theme"][1]}" title="{t["theme"][0]}" aria-label="{t["theme"][0]}"><svg class="icone-lune" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><mask id="masque-lune"><rect width="24" height="24" fill="#fff"/><circle cx="16" cy="9" r="7" fill="#000"/></mask><circle class="disque" cx="12" cy="12" r="8" mask="url(#masque-lune)"/></svg><svg class="icone-soleil" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><g stroke-width="1.6" stroke-linecap="round"><line x1="18.50" y1="12.00" x2="21.20" y2="12.00"/><line x1="16.60" y1="16.60" x2="18.51" y2="18.51"/><line x1="12.00" y1="18.50" x2="12.00" y2="21.20"/><line x1="7.40" y1="16.60" x2="5.49" y2="18.51"/><line x1="5.50" y1="12.00" x2="2.80" y2="12.00"/><line x1="7.40" y1="7.40" x2="5.49" y2="5.49"/><line x1="12.00" y1="5.50" x2="12.00" y2="2.80"/><line x1="16.60" y1="7.40" x2="18.51" y2="5.49"/></g></svg></button>
 				<a href="https://www.linkedin.com/in/annabelle-dussault-625a05303/" target="_blank" rel="noopener" class="icon brands fa-linkedin-in" title="LinkedIn"><span class="label">LinkedIn</span></a>
+				<a href="https://github.com/annabelle-dussault" target="_blank" rel="noopener" class="icon brands fa-github" title="GitHub"><span class="label">GitHub</span></a>
 				<a href="{lien(page_id, langue, autre)}" class="langue" hreflang="{autre}" title="{autre_long}"><span class="langue-actuelle">{langue.upper()}</span> / {autre_court}</a>
 				<button type="button" class="bouton-menu" aria-controls="menu" aria-expanded="false"><span class="icon solid fa-bars"></span> {t["menu_bouton"]}</button>
 			</div>
@@ -137,6 +138,7 @@ def construire(page_id, langue):
 			<ul>
 				<li><a href="mailto:anna5.dussault@gmail.com">anna5.dussault@gmail.com</a></li>
 				<li><a href="https://www.linkedin.com/in/annabelle-dussault-625a05303/" target="_blank" rel="noopener">LinkedIn</a></li>
+				<li><a href="https://github.com/annabelle-dussault" target="_blank" rel="noopener">GitHub</a></li>
 			</ul>
 			<p class="droits">&copy; 2026 Annabelle Dussault. {t["droits"]}</p>
 		</div>
