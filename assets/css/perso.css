@@ -243,6 +243,13 @@ main { padding: 4rem 0 5rem; }
 	border-top: 2px solid var(--encre);
 	padding-top: 1.75rem;
 }
+.fiche-titre {
+	margin: 4.5rem 0 0;
+	font-size: 1.6rem;
+	padding-bottom: 0.6rem;
+	border-bottom: 2px solid var(--encre);
+}
+.fiche-titre + .fiche { margin-top: 0; border-top: 0; }
 .fiche h2 { font-size: 1.35rem; margin-bottom: 0.9rem; }
 .fiche ul { list-style: none; padding: 0; margin: 0 0 1rem; }
 .fiche li { margin-bottom: 0.85rem; line-height: 1.45; }
@@ -254,6 +261,7 @@ main { padding: 4rem 0 5rem; }
 	.presentation { grid-template-columns: 1fr; }
 	.presentation .photo-ronde { order: -1; width: 10rem; }
 	.fiche { grid-template-columns: 1fr; gap: 1.5rem; margin-top: 3rem; }
+	.fiche-titre { margin-top: 3rem; }
 }
 
 /* ===== À propos ===== */
