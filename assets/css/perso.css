@@ -114,7 +114,7 @@ ul { padding-left: 1.2em; }
 }
 .menu a:hover { color: var(--encre); }
 .menu a.active { color: var(--encre); border-bottom-color: var(--accent); }
-.outils { display: flex; align-items: center; gap: 1rem; }
+.outils { display: flex; align-items: center; gap: 0.85rem; }
 .outils a, .outils button { color: var(--texte-pale); }
 .outils a:hover, .outils button:hover { color: var(--accent); }
 .bouton-theme, .bouton-menu, .bouton-saison {
@@ -125,39 +125,49 @@ ul { padding-left: 1.2em; }
 	cursor: pointer;
 	line-height: 1;
 }
-.bouton-theme svg, .bouton-saison svg { display: block; }
+/* ===== Icônes de l'en-tête : même cercle, même trait, même couleur ===== */
+.ico { display: block; transition: transform 0.3s ease; }
+.bouton-theme, .bouton-saison { padding: 0; }
+.ico .anneau { fill: none; stroke: currentColor; stroke-width: 1.4; }
+.ico .trait, .ico .trait * { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.ico .plein { fill: currentColor; }
+.lien-icone { display: block; text-decoration: none; }
 .bouton-saison.eteint { opacity: 0.4; }
 .bouton-saison[hidden] { display: none; }
+.bouton-theme:hover .ico { transform: rotate(-15deg); }
 
-/* Icônes jour / nuit : croissant de lune le jour, soleil à rayons la nuit */
-.icone-lune .disque { fill: var(--accent); }
-.icone-soleil circle { fill: var(--accent); }
-.icone-soleil line { stroke: var(--accent); }
+/* Jour / nuit : croissant de lune le jour, soleil la nuit */
 .icone-soleil { display: none !important; }
 [data-theme="dark"] .icone-soleil { display: block !important; }
 [data-theme="dark"] .icone-lune { display: none !important; }
-.bouton-theme:hover svg { transform: rotate(-15deg); }
-.bouton-theme svg { transition: transform 0.3s ease; }
 
 /* Cadran des saisons : le quart de la saison actuelle est coloré */
 .cadran .quart { display: none; }
-.cadran .aiguille { stroke: var(--encre); }
+.cadran .aiguille { stroke: var(--encre); stroke-width: 1.6; stroke-linecap: round; }
 .cadran .pivot { fill: var(--encre); }
 .saison-hiver .quart-hiver { display: block; fill: #8fb3d9; }
 .saison-printemps .quart-printemps { display: block; fill: #e993ad; }
 .saison-ete .quart-ete { display: block; fill: #e2a832; }
 .saison-automne .quart-automne { display: block; fill: #c8532b; }
-.outils .icon.brands { font-size: 1.1rem; }
+
+/* Bouton de langue : même hauteur et même trait que les icônes */
 a.langue {
-	font-size: 0.8rem;
+	display: inline-flex;
+	align-items: center;
+	height: 24px;
+	border: 1.4px solid currentColor;
+	border-radius: 12px;
+	padding: 0 2px;
+	font-size: 0.7rem;
 	font-weight: 600;
 	letter-spacing: 0.04em;
 	text-decoration: none;
-	border: 1px solid var(--bordure);
-	border-radius: 3px;
-	padding: 0.2rem 0.5rem;
+	line-height: 1;
 }
-a.langue .langue-actuelle { color: var(--accent); }
+a.langue span { padding: 0.22rem 0.45rem; border-radius: 10px; }
+a.langue span.on { background: currentColor; }
+a.langue span.on { color: var(--fond); background: var(--texte-pale); }
+a.langue:hover span.on { background: var(--accent); }
 .bouton-menu { display: none; color: var(--encre); font-size: 0.95rem; }
 
 @media (max-width: 880px) {
