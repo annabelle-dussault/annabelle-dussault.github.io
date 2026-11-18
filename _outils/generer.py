@@ -16,7 +16,7 @@ PAGES = [
 
 TEXTES = {
     "fr": {
-        "menu": {"accueil": "Accueil", "apropos": "À propos", "cv": "CV",
+        "menu": {"accueil": "Accueil", "apropos": "À propos", "cv": "CV", "projets": "Mes projets",
                  "engagements": "Engagements", "recos": "Hors campus"},
         "description": "Annabelle Dussault, étudiante à la maîtrise en science politique à l'Université Laval.",
         "pied": "Étudiante à la maîtrise en science politique, Université Laval",
@@ -27,7 +27,7 @@ TEXTES = {
         "evitement": "Aller au contenu",
     },
     "en": {
-        "menu": {"accueil": "Home", "apropos": "About", "cv": "CV",
+        "menu": {"accueil": "Home", "apropos": "About", "cv": "CV", "projets": "My projects",
                  "engagements": "Involvement", "recos": "Off campus"},
         "description": "Annabelle Dussault, master's student in political science at Université Laval.",
         "pied": "Master's student in political science, Université Laval",
@@ -68,6 +68,11 @@ def construire(page_id, langue):
         "\t\t\t\t\t" + f'<li><a href="{lien(pid, langue, langue)}"'
         f'{actif if pid == page_id else ""}>{t["menu"][pid]}</a></li>'
         for pid, _, _ in PAGES)
+    # Onglet « Mes projets » : une section de la page d'accueil (index.html#projets), placée après « CV »
+    lien_projets = "\t\t\t\t\t" + f'<li><a href="{lien("accueil", langue, langue)}#projets">{t["menu"]["projets"]}</a></li>'
+    lignes = menu.split("\n")
+    position = [i for i, l in enumerate(lignes) if fichier("cv", langue) + '"' in l][0] + 1
+    menu = "\n".join(lignes[:position] + [lien_projets] + lignes[position:])
 
     return f"""<!DOCTYPE html>
 <!-- Page générée par _outils/generer.py : modifier le contenu dans _outils/contenu/ -->
