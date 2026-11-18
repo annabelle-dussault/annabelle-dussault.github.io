@@ -577,6 +577,13 @@ main { padding: 4rem 0 5rem; }
 a.projet-apercu:hover img { transform: scale(1.03); }
 .projet-apercu.a-venir { display: flex; align-items: center; justify-content: center; color: var(--texte-pale); font-size: 0.95rem; }
 
-/* ----- Aperçu cliquable du CV sur téléphone ----- */
-.cv-mobile img { display: block; width: 100%; max-width: 360px; height: auto; margin: 0 auto 1rem; border: 1px solid var(--bordure); background: #ffffff; }
-.cv-mobile p { text-align: center; margin: 0; }
+/* ----- Vignette cliquable du CV (cv/cv.png), à côté des boutons ----- */
+.cv-entete { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1.5rem; }
+.cv-entete .cv-liens { margin-bottom: 0; }
+.cv-vignette { flex: none; display: block; width: 72px; border: 1px solid var(--bordure); border-radius: 3px; overflow: hidden; background: #ffffff; transition: transform 0.2s ease; }
+.cv-vignette:hover { transform: translateY(-2px); }
+.cv-vignette img { display: block; width: 100%; height: auto; }
+@media (max-width: 700px) {
+	.cv-entete { flex-direction: column; align-items: flex-start; }
+	.cv-vignette { width: 100%; max-width: 360px; }
+}
