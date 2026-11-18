@@ -39,7 +39,7 @@
 					<li><a href="index.html" class="active" aria-current="page">Home</a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="cv.html">CV</a></li>
-					<li><a href="index.html#projets">My projects</a></li>
+					<li><a href="projects.html">My projects</a></li>
 					<li><a href="recommendations.html">Off campus</a></li>
 				</ul>
 			</nav>
@@ -56,6 +56,10 @@
 
 	<main id="contenu">
 		<div class="page">
+			<script>
+				// Les anciens liens vers la section (…/#projets) mènent maintenant à la page des projets
+				if (location.hash === '#projets') location.replace('projects.html');
+			</script>
 			<section class="presentation">
 				<div>
 					<h1>Annabelle Dussault</h1>
@@ -91,27 +95,6 @@
 						<li>Diploma of College Studies in Science, Letters and Arts<span>2021 to 2023</span></li>
 					</ul>
 					<a class="suite" href="cv.html">View the full CV</a>
-				</div>
-			</section>
-
-			<!-- My projects (POL-6078) -->
-			<section id="projets" class="projets">
-				<h2>My projects</h2>
-				<p>A selection of my projects. Click an image to explore a project.</p>
-				<div class="projets-grille">
-
-					<article class="projet">
-						<div class="projet-apercu a-venir">Video coming soon</div>
-						<h3>Critical review: OpenRefine</h3>
-						<p>A five-minute research video made for the course POL-6078 (in French). Online in December 2026.</p>
-					</article>
-
-					<article class="projet">
-						<div class="projet-apercu a-venir">Project coming soon</div>
-						<h3>Term project (POL-6078)</h3>
-						<p>A short research project using digital tools at each step of the research cycle. Online in December 2026.</p>
-					</article>
-
 				</div>
 			</section>
 

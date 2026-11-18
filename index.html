@@ -39,7 +39,7 @@
 					<li><a href="index.html" class="active" aria-current="page">Accueil</a></li>
 					<li><a href="a-propos.html">À propos</a></li>
 					<li><a href="cv.html">CV</a></li>
-					<li><a href="index.html#projets">Mes projets</a></li>
+					<li><a href="projets.html">Mes projets</a></li>
 					<li><a href="recommandations.html">Hors campus</a></li>
 				</ul>
 			</nav>
@@ -56,6 +56,10 @@
 
 	<main id="contenu">
 		<div class="page">
+			<script>
+				// Les anciens liens vers la section (…/#projets) mènent maintenant à la page des projets
+				if (location.hash === '#projets') location.replace('projets.html');
+			</script>
 			<section class="presentation">
 				<div>
 					<h1>Annabelle Dussault</h1>
@@ -91,34 +95,6 @@
 						<li>Diplôme d'études collégiales en Sciences, lettres et arts<span>Cégep de Sainte-Foy, 2021 à 2023</span></li>
 					</ul>
 					<a class="suite" href="cv.html">Voir le CV complet</a>
-				</div>
-			</section>
-
-			<!-- Mes projets (POL-6078) -->
-			<section id="projets" class="projets">
-				<h2>Mes projets</h2>
-				<p>Voici une sélection de mes projets. Cliquez sur une image pour découvrir le projet.</p>
-				<div class="projets-grille">
-
-					<!-- Projet 1 : capsule d'analyse critique (au plus tard le 2 décembre).
-					     Quand la capsule est prête : remplacer le bloc « projet-apercu » par
-					     <a href="LIEN-DE-LA-CAPSULE" class="projet-apercu" target="_blank" rel="noopener"><img src="capsule/capsule.png" alt="Aperçu de ma capsule" /></a>
-					     et ajouter le bouton « Voir la capsule » sous la description. -->
-					<article class="projet">
-						<div class="projet-apercu a-venir">Capsule à venir</div>
-						<h3>Analyse critique : OpenRefine</h3>
-						<p>Capsule scientifique de 5 minutes réalisée dans le cours POL-6078. En ligne en décembre 2026.</p>
-					</article>
-
-					<!-- Projet 2 : projet de session (au plus tard le 11 décembre).
-					     Quand le projet est prêt : même principe, avec projet_session/projet.html
-					     et projet_session/projet.png, et un bouton « Voir le projet complet ». -->
-					<article class="projet">
-						<div class="projet-apercu a-venir">Projet à venir</div>
-						<h3>Projet de session (POL-6078)</h3>
-						<p>Un court projet de recherche qui mobilise des outils numériques à chaque étape du cycle de la recherche. En ligne en décembre 2026.</p>
-					</article>
-
 				</div>
 			</section>
 
