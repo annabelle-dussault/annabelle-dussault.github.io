@@ -577,16 +577,6 @@ main { padding: 4rem 0 5rem; }
 a.projet-apercu:hover img { transform: scale(1.03); }
 .projet-apercu.a-venir { display: flex; align-items: center; justify-content: center; color: var(--texte-pale); font-size: 0.95rem; }
 
-/* ----- Aperçu du CV (page CV) ----- */
-.cv-apercu { display: grid; grid-template-columns: minmax(0, 320px) 1fr; gap: 3rem; align-items: center; margin-top: 1rem; }
-.cv-vignette { display: block; border: 1px solid var(--bordure); border-radius: 4px; overflow: hidden; background: #ffffff; box-shadow: 0 10px 30px rgba(22, 32, 46, 0.12); transition: transform 0.25s ease, box-shadow 0.25s ease; }
-.cv-vignette img { display: block; width: 100%; height: auto; }
-.cv-vignette:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(22, 32, 46, 0.18); }
-.cv-texte h2 { font-size: 1.5rem; margin-bottom: 0.75rem; }
-.cv-texte p { max-width: 34rem; }
-.cv-apercu .cv-liens { margin: 1.5rem 0 0; }
-@media (max-width: 700px) {
-	.cv-apercu { grid-template-columns: 1fr; gap: 2rem; }
-	.cv-vignette { max-width: 280px; margin: 0 auto; }
-}
-@media (prefers-reduced-motion: reduce) { .cv-vignette, .cv-vignette:hover { transition: none; transform: none; } }
+/* ----- Aperçu cliquable du CV sur téléphone ----- */
+.cv-mobile img { display: block; width: 100%; max-width: 360px; height: auto; margin: 0 auto 1rem; border: 1px solid var(--bordure); background: #ffffff; }
+.cv-mobile p { text-align: center; margin: 0; }

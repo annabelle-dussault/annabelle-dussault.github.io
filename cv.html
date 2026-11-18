@@ -61,19 +61,20 @@
 				<p class="chapeau">Mis à jour en novembre 2026.</p>
 			</header>
 
-			<section class="cv-apercu" aria-label="Aperçu du CV">
-				<a class="cv-vignette" href="cv/cv.pdf" target="_blank" rel="noopener">
+			<div class="cv-liens">
+				<a class="bouton" href="cv/cv.pdf" target="_blank" rel="noopener">Voir le CV en PDF</a>
+				<a href="cv/cv.pdf" download>Télécharger le PDF</a>
+			</div>
+
+			<iframe class="cv-visionneuse" src="cv/cv.pdf#view=FitH" title="CV d'Annabelle Dussault (PDF)"></iframe>
+
+			<!-- Sur téléphone, la visionneuse est remplacée par l'aperçu cliquable cv/cv.png -->
+			<div class="cv-mobile">
+				<a href="cv/cv.pdf" target="_blank" rel="noopener">
 					<img src="cv/cv.png" alt="Aperçu de la première page du CV d'Annabelle Dussault" width="1230" height="1480" />
 				</a>
-				<div class="cv-texte">
-					<h2>Consultez mon CV</h2>
-					<p>Formation, expérience en recherche, prix et engagements : mon parcours complet tient en deux pages. Cliquez sur l'aperçu ou sur le bouton pour ouvrir le CV en PDF dans un nouvel onglet.</p>
-					<div class="cv-liens">
-						<a class="bouton" href="cv/cv.pdf" target="_blank" rel="noopener">Voir le CV en PDF</a>
-						<a href="cv/cv.pdf" download>Télécharger le PDF</a>
-					</div>
-				</div>
-			</section>
+				<p>Touchez l'aperçu pour ouvrir le CV complet en PDF.</p>
+			</div>
 
 		</div>
 	</main>
