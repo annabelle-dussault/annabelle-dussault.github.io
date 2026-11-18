@@ -566,3 +566,13 @@ main { padding: 4rem 0 5rem; }
 @media (prefers-reduced-motion: reduce) {
 	*, *::before, *::after { transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ----- Mes projets (page d'accueil) ----- */
+.projets { margin-top: 4rem; padding-top: 2.5rem; border-top: 1px solid var(--bordure); scroll-margin-top: 6rem; }
+.projets-grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 1.5rem; }
+.projet h3 { font-size: 1.2rem; margin: 1rem 0 0.4rem; }
+.projet p { margin: 0 0 0.9rem; }
+.projet-apercu { display: block; aspect-ratio: 16 / 10; border: 1px solid var(--bordure); border-radius: 4px; overflow: hidden; background: var(--fond-alt); }
+.projet-apercu img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform 0.3s ease; }
+a.projet-apercu:hover img { transform: scale(1.03); }
+.projet-apercu.a-venir { display: flex; align-items: center; justify-content: center; color: var(--texte-pale); font-size: 0.95rem; }
